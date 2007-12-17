@@ -13,7 +13,6 @@ License: GPL
 Group:  Sound
 URL: http://flac.sourceforge.net/
 Source: http://prdownloads.sourceforge.net/flac/flac-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: xmms-devel 
 BuildRequires: libogg-devel
 BuildRequires: nasm
