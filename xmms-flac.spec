@@ -1,6 +1,6 @@
 %define oname  flac
 %define version 1.2.1
-%define release %mkrel 4
+%define release %mkrel 2
 
 %define major  8
 %define libname %mklibname %{oname} %{major}
@@ -9,10 +9,11 @@ Name: xmms-flac
 Summary: Xmms plugin to play FLAC files
 Version:  %version
 Release:  %release
-License: GPL
+License: GPLv2+
 Group:  Sound
 URL: http://flac.sourceforge.net/
 Source: http://prdownloads.sourceforge.net/flac/flac-%{version}.tar.gz
+Patch: flac-1.2.1-gcc43.patch
 BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: xmms-devel 
 BuildRequires: libogg-devel
@@ -41,6 +42,7 @@ under the GNU Free Documentation License.
 
 %prep
 %setup -q -n %oname-%version
+%patch -p1
 
 %build
 %configure2_5x
