@@ -1,6 +1,6 @@
 %define oname  flac
 %define version 1.2.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 %define major  8
 %define libname %mklibname %{oname} %{major}
@@ -13,8 +13,8 @@ License: GPLv2+
 Group:  Sound
 URL: http://flac.sourceforge.net/
 Source: http://prdownloads.sourceforge.net/flac/flac-%{version}.tar.gz
-Patch: flac-1.2.1-gcc43.patch
-Patch1: flac-1.2.1-fix-str-fmt.patch
+Patch0: flac-1.2.1-gcc43.patch
+Patch1: flac-1.2.1-format-strings.patch
 BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: xmms-devel 
 BuildRequires: libogg-devel
@@ -43,8 +43,7 @@ under the GNU Free Documentation License.
 
 %prep
 %setup -q -n %oname-%version
-%patch -p1
-%patch1 -p0
+%apply_patches
 
 %build
 %configure2_5x
