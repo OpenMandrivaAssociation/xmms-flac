@@ -43,7 +43,7 @@ under the GNU Free Documentation License.
 
 %prep
 %setup -q -n %oname-%version
-%apply_patches
+%autopatch -p1
 
 %build
 %configure2_5x
