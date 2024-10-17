@@ -11,7 +11,7 @@ Version:  %version
 Release:  %release
 License: GPLv2+
 Group:  Sound
-URL: http://flac.sourceforge.net/
+URL: https://flac.sourceforge.net/
 Source: http://prdownloads.sourceforge.net/flac/flac-%{version}.tar.gz
 Patch0: flac-1.2.1-gcc43.patch
 Patch1: flac-1.2.1-format-strings.patch
