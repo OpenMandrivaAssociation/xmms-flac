@@ -16,6 +16,9 @@ Source: http://prdownloads.sourceforge.net/flac/flac-%{version}.tar.gz
 Patch0: flac-1.2.1-gcc43.patch
 Patch1: flac-1.2.1-format-strings.patch
 BuildRoot: %{_tmppath}/%{name}-root
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: xmms-devel 
 BuildRequires: libogg-devel
 BuildRequires: nasm
