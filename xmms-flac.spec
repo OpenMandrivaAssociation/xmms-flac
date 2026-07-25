@@ -1,6 +1,6 @@
 %define oname  flac
 %define version 1.2.1
-%define release %mkrel 6
+%define release 7
 
 %define major  8
 %define libname %mklibname %{oname} %{major}
